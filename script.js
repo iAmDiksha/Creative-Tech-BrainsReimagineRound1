@@ -34,3 +34,42 @@ close.addEventListener("click", () => {
     open.classList.remove('hide');
     menu.classList.remove('flex-col')
 })
+
+var splide = new Splide( '.splide', {
+    perPage: 3,
+    perMove: 1,
+    gap    : '1rem',
+    padding: '3rem',
+    type: 'loop',
+    drag: 'free',
+    focus  : 'center',
+    autoplay: true,
+    breakpoints: {
+      1150:{
+          padding: '0rem'
+      },
+      850: {
+        perPage: 2.5,
+        gap    : '.7rem',
+      },
+      710: {
+        perPage: 2,
+        gap    : '.7rem',
+      },
+      590: {
+        perPage: 1.7,
+        gap    : '.7rem',
+      },
+      540: {
+        perPage: 1.5,
+        gap    : '.7rem',
+      },
+      500:{
+          perPage: 1,
+          gap    : '.7rem',
+          padding: '1.5rem'
+      }
+    },
+  } );
+  
+  splide.mount();
