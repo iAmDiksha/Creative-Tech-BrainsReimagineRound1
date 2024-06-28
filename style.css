@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'HelveticaNowTextMedium';
-    src: url('HelveticaNowTextMedium.ttf');
+    font-family: 'MonaSans-Regular';
+    src: url('MonaSans-Regular.ttf');
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "HelveticaNowTextMedium";
+    font-family: "MonaSans-Regular";
 }
 
 html, body{
@@ -15,6 +15,15 @@ html, body{
     width: 100%;
     background-color: white;
     overflow-x: hidden;
+}
+
+.heading{
+    margin-bottom: 20px;
+    font-family: "Source Serif 4", serif;
+    font-size: 64px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 Navbar{
@@ -121,6 +130,11 @@ header{
     align-items: center;
     z-index: 10;
 }
+
+.header-left p{
+    line-height: 26px;
+}
+
 .header-right{
     width: 55%;
 }
@@ -146,11 +160,32 @@ header{
     transform: scale(0.89);
 }
 
+.header-btns button.shop-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    padding-left: 15px;
+    gap: 10px;
+}
+
+.shop-btn-img{
+    background-color: red;
+    display: flex;
+    place-items: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 2px;
+    padding-left: 5px;
+}
+
 .txt p{
     margin: 10px 0 20px 0;
 }
 
 .txt h5{
+    margin-top: 10px;
     font-size: 17px;
     margin-bottom: 5px;
 }
@@ -159,6 +194,7 @@ header{
     font-weight: 900;
     font-style: normal;
     font-size: 50px;
+    margin-top: 10px;
 }
 
 .shop-btn{
@@ -181,10 +217,16 @@ header{
     gap: 20px;
 }
 
-.shoe-detail .left h1, .shoe-detail .left p{
+.shoe-detail .left p{
     text-transform: uppercase;
     max-width: 400px;
     margin: 20px 0;
+    line-height: 30px;
+}
+
+.shoe-detail .left h1{
+    max-width: 400px;
+    text-align: left;
 }
 
 .shoe-detail .left{
@@ -216,6 +258,14 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.shoe-card-description p{
+    line-height: 25px;
+}
+
+.shoe-card-description p:nth-child(2){
+    opacity: 0.7;
 }
 
 .shoe-card-image{
@@ -250,12 +300,6 @@ header{
     background-color: black;
 }
 
-
-.heading{
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    text-align: center;
-}
 .splide{
     margin: auto;
 }
@@ -266,21 +310,25 @@ header{
 }
 
 .member h2{
-    margin: -10px 0 10px 0;
-    text-transform: uppercase;
+    margin: -16px 0 10px 0;
+    font-size: 30px;
+    font-family: "Source Serif 4", serif;
+    font-weight: normal;
+    text-transform: capitalize;
 }
 .member p{
     max-width: 600px;
     margin: 10px auto;
+    line-height: 26px;
 }
 
 .member-bg{
     width: 80%;
     margin: auto;
     height: 400px;
-    background-image: url('./images/member.png');
+    background-image: url('./images/member1.jpeg');
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     margin-bottom: 25px;
 }
 
@@ -294,6 +342,8 @@ header{
     border-radius: 20px;
     display: inline-block;
     margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .sport-cards{
@@ -315,6 +365,7 @@ header{
     color: black;
     border-radius: 20px;
     font-weight: lighter;
+    margin-top: 10px;
 }
 
 .sport-card .sport_img{
@@ -328,14 +379,6 @@ header{
     height: 100%;
     object-fit: cover;
 }
-
-@media screen and (max-width: 500px)
-{
-    .splide{
-        width: 300px;
-    }
-}
-
 
 
 @media screen and (max-width: 1145px)
@@ -366,6 +409,7 @@ header{
     .header-right{
         width: 100%;
         height: 300px;
+        margin-top: -30px;
     }
     .header-img{
         height: 300px;
@@ -383,6 +427,10 @@ header{
     #menu{
         display: none;
     }
+    .heading{
+        font-size: 45px;
+        padding: 0 10px;
+    }
     .shoe-card-image
     {
         width: 250px;
@@ -396,12 +444,18 @@ header{
         text-align: center;
     }
     
-    .shoe-detail .left h1, .shoe-detail .left p{
+    .shoe-detail .left p{
         text-transform: uppercase;
         max-width: 90%;
         margin: 20px auto;
     }
-   
+
+    .shoe-detail .left h1{
+        max-width: 90%;
+        text-align: center;
+        margin: 20px auto;
+    }
+
     .detail-image1, .detail-image2{
         height: 250px;
         width: 400px;
@@ -409,3 +463,36 @@ header{
     }
 }
 
+@media screen and (max-width: 500px)
+{
+    .splide{
+        width: 300px;
+    }
+    .member-bg{
+        background-image: url('./images/member3.jpeg');
+    }
+    .member h2{
+        font-size: 24px;
+    }
+    .heading{
+        font-size: 40px;
+    }
+    .detail-image1, .detail-image2{
+        height: 210px;
+        width: 300px;
+        margin: auto;
+    }
+    .header-right{
+        width: 80%;
+        max-width: 200px;
+        margin-top: -70px;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .header-right{
+        width: 80%;
+        max-width: 150px;
+        margin-top: -70px;
+    }
+}
