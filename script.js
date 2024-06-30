@@ -73,3 +73,40 @@ var splide = new Splide( '.splide', {
   } );
   
   splide.mount();
+
+   document.addEventListener("DOMContentLoaded", function() {
+    // Initialize Slick sliders
+    $('.slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    // GSAP animations for sliders
+    gsap.utils.toArray('.slide').forEach(slide => {
+        gsap.from(slide, {
+            scrollTrigger: {
+                trigger: slide,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+    });
+});
