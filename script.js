@@ -35,6 +35,17 @@ close.addEventListener("click", () => {
     menu.classList.remove('flex-col')
 })
 
+document.body.addEventListener('scroll',()=>{
+  if(menu.classList.contains("flex-col"))
+  {
+    close.classList.remove('show');
+    close.classList.add('hide');
+    open.classList.add('show');
+    open.classList.remove('hide');
+    menu.classList.remove('flex-col')
+  }
+})
+
 var splide = new Splide( '.splide', {
     perPage: 3,
     perMove: 1,

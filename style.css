@@ -41,7 +41,8 @@ Navbar{
 }
 .menu-hide{
     position: absolute;
-    top: -100%;
+    right: -100%;
+    transition: all 1s;
 }
 .menu-hide.flex-col{
     display: flex;
@@ -51,21 +52,27 @@ Navbar{
     right: 0;
     padding: 10px;
     z-index: 15;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     background-color: white;
 }
 
 .flex-col a{
-    width: 90%;
-    text-align: center;
+    width: 100%;
+    text-align: left;
     padding: 10px;
-    border-radius: 20px;
     color: black;
+    text-decoration: none;
 }
 .flex-col a:hover{
     background-color: #f6f6f6;
+}
+
+#menu1{
+    max-width: 300px;
+    width: 80%;
+    height: 88%;
 }
 
 #menu a{
@@ -74,7 +81,8 @@ Navbar{
     color: black;
 }
 #menu a:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-weight: bolder;
 }
 .right-menu img{
     cursor: pointer;
@@ -366,6 +374,8 @@ header{
     border-radius: 20px;
     font-weight: lighter;
     margin-top: 10px;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .sport-card .sport_img{
