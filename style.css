@@ -512,8 +512,11 @@ body {
 .slider {
     max-width:2000px; /* Adjusted width for the slider container */
     margin: 0 auto; /* Center align the slider container */
-    padding: 40px 0;
+    padding: 40px ;
      display: flex; 
+     position: relative;
+     margin-right: 123px;
+     margin-left:34px ;
      
 }
 
@@ -640,6 +643,59 @@ font-style: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
 }
+
+.member-benefits-section p{
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+.slide .classics-item h3{
+    background-color: #b7b7ba;
+    padding : 5px 10px;
+    cursor : pointer;
+    
+    
+}
+.classics-item .slider-button{
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    padding: 7px 10px;
+} 
+.classics-section .arrow  {
+width: 1300px;
+position: absolute;
+justify-content: space-between;
+display: flex;
+top: 40%;
+}
+
+.classics-section .arrow button {
+    font-size: 20px;
+width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 0 20px;
+    }
+
+.member-benefits-section .arrow{
+width: 1300px;
+position: absolute;
+justify-content: space-between;
+display: flex;
+top: 40%;
+    }
+
+.member-benefits-section  .arrow button {
+        font-size: 20px;
+    width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid gray;
+        background-color: white;
+        margin: 0 20px;
+        }
 
 @media (max-width: 768px) {
     .slider h2 {
