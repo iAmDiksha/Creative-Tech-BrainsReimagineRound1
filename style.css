@@ -431,6 +431,9 @@ header{
         justify-content: center;
         align-items: center;
     }
+    Navbar{
+        padding: 10px 25px;
+    }
     .menu-bar.show{
         display: inline-block;
     }
