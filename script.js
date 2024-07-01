@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   t1.from("#logo, #menu, .right-menu",{
     duration: 1,
     delay: 0.5,
-    y: "-10px",
+    y: "-30px",
     opacity: 0,
   })
 
@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     opacity: 0,
     ease: "bounce.out",
     y: "-100px",
-    duration: 3,
     delay: 0.3
   })
 
@@ -68,6 +67,7 @@ document.body.addEventListener('scroll',()=>{
   }
 })
 
+document.addEventListener("DOMContentLoaded", () => {
 var splide = new Splide( '.splide', {
     perPage: 3.5,
     perMove: 1,
@@ -109,7 +109,7 @@ var splide = new Splide( '.splide', {
   } );
   
   splide.mount();
-
+})
    document.addEventListener("DOMContentLoaded", function() {
     // Initialize Slick sliders
     $('.slider').slick({
