@@ -320,6 +320,7 @@ header{
 .member{
     text-align: center;
     padding: 40px;
+    padding-top: 10px;
 }
 
 .member h2{
@@ -338,13 +339,11 @@ header{
 .member-bg{
     width: 80%;
     margin: auto;
-    min-height: 500px;
-    max-height: 500px;
-    background-image: url('https://images.unsplash.com/photo-1530511250146-026c208e059e?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: contain;
+    height: 400px;
+    background-image: url('./images/member1.jpeg');
+    background-size: cover;
     background-position: center;
-    margin-bottom: 25px;
-    background-attachment: fixed;
+    margin-bottom: 10px;
     background-repeat: no-repeat;
 }
 
@@ -360,6 +359,11 @@ header{
     margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
+    transition: all 0.3s;
+}
+.member a:hover{
+    background-color: #000;
+    color: #fff;
 }
 
 .sport-cards{
@@ -373,7 +377,7 @@ header{
 }
 
 .sports{
-    padding: 30px 0;
+    padding: 25px 0;
 }
 
 .sport-card h2{
@@ -485,9 +489,6 @@ header{
         width: 400px;
         margin: auto;
     }
-    .member-bg{
-        height: 400px;
-    }
 }
 
 @media screen and (max-width: 500px)
@@ -497,7 +498,7 @@ header{
     }
     .member-bg{
         width: 100%;
-        background-image: url('https://images.unsplash.com/photo-1554350747-ec45fd24f51b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG5pa2V8ZW58MHx8MHx8fDA%3D');
+        background-image: url('./images/member.jpeg');
         height: 300px;
     }
     .member h2{
@@ -529,10 +530,6 @@ header{
     }
 }
 
-/* .centered-section {
-    text-align: center;
-    padding: 50px 20px;
-} */
 .section{
     padding: 20px;
 }
@@ -606,6 +603,7 @@ footer {
     flex-wrap: wrap;
     max-width: 800px;
     margin: auto;
+    font-size: 15px;
 }
 
 .footer-column {
@@ -614,7 +612,6 @@ footer {
 }
 
 .footer-column h3 {
-    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
