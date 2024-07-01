@@ -1,12 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
+  
+  let t1 = gsap.timeline();
+
+  t1.from("#logo, #menu, .right-menu",{
+    duration: 1,
+    delay: 0.5,
+    y: "-10px",
+    opacity: 0,
+  })
+
+  t1.from(".header-right",{
+    opacity: 0,
+    ease: "bounce.out",
+    y: "-100px",
+    duration: 3,
+    delay: 0.3
+  })
+
+  t1.from(".anime",{
+    delay:0.2,
+    y: "100px",
+    opacity: 0,
+    stagger: 0.5,
+  })
+
     const images = document.querySelectorAll('.header-img')
 
     let currentIndex = 0;
 
     let shoeChange = () => {
-        // gsap.from(images[currentIndex].active, 
-        //     { y: "-100%",display: "none", duration: 2, ease: "bounce.inOut", roatate: '360deg' },
-        // );
         images[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % images.length;
         images[currentIndex].classList.add('active');
@@ -47,7 +69,7 @@ document.body.addEventListener('scroll',()=>{
 })
 
 var splide = new Splide( '.splide', {
-    perPage: 3,
+    perPage: 3.5,
     perMove: 1,
     gap    : '1rem',
     padding: '3rem',
@@ -56,8 +78,9 @@ var splide = new Splide( '.splide', {
     focus  : 'center',
     autoplay: true,
     breakpoints: {
-      1150:{
-          padding: '0rem'
+      1240:{
+         perPage: 3,
+         padding: '0rem'
       },
       850: {
         perPage: 2.5,
@@ -70,6 +93,8 @@ var splide = new Splide( '.splide', {
       590: {
         perPage: 1.7,
         gap    : '.7rem',
+        pagination: false,
+        arrows: 0
       },
       540: {
         perPage: 1.5,
@@ -78,7 +103,7 @@ var splide = new Splide( '.splide', {
       500:{
           perPage: 1,
           gap    : '.7rem',
-          padding: '1.5rem'
+          padding: '1rem',
       }
     },
   } );
