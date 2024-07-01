@@ -366,6 +366,11 @@ header{
     color: #fff;
 }
 
+.member a:active{
+    background-color: #000;
+    color: #fff;
+}
+
 .sport-cards{
     display: flex;
     justify-content: center;
