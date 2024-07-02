@@ -1,8 +1,4 @@
-window.addEventListener('load', () => {
-  loader.style.display = 'none';
-});
 
-let loader = document.querySelector(".loading")
 document.addEventListener("DOMContentLoaded", () => {
   
   let t1 = gsap.timeline();
