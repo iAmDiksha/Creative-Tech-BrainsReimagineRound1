@@ -147,3 +147,6 @@ var splide = new Splide( '.splide', {
         });
     });
 });
+
+
+

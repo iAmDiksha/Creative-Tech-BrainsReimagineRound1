@@ -580,7 +580,7 @@ header{
     font-weight: normal;
 }
 
-.slider .slide .shop-button {
+.slider .slide .shop-button, .air .shop-button {
     background-color: #ece5e5;
     color: #050000;
     padding: 5px 10px;
@@ -592,9 +592,32 @@ header{
 }
 
 .slider .slide .shop-button:hover,
-.slider .slide .slider-button:hover {
+.slider .slide .slider-button:hover, .air .shop-button:hover {
     background-color: black;
     color: white;
+}
+
+.air{
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    max-width: 800px;
+}
+
+.air .heading{
+    text-transform: uppercase;
+}
+
+.air > .shop-button{
+    background-color: #000;
+    color: white;
+    transition: all 0.9s;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.air > .shop-button:active{
+    transform: scale(0.8);
 }
 
 footer {
